@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+    <link rel="stylesheet" type="text/css" href="/css/photos.css" />
+</head>
+<body>
+<div class="main-wrapper">
+    <!-- nav -->
+    <div class="sticky">
+    {{> navBar}}
+    </div>
+    <!-- /nav -->
+    <!-- Page content begin-->
+    <div class="content">
+        <section class="titleSection">
+            <div class="pageName">Icon</div>
+        </section>
+        <section class="first">
+            <div class="responsive">
+                <div class="gallery"  width="600" height="400">
+                    <a target="_blank" href="img/icon/line.jpg">
+                        <img src="img/icon/line.jpg">
+                   </a>
+                   <div class="desc">Sketch</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery"  width="600" height="400">
+                    <a target="_blank" href="img/icon/grey.jpg">
+                        <img src="img/icon/grey.jpg">
+                   </a>
+                   <div class="desc">Gery</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery"  width="600" height="200">
+                    <a target="_blank" href="img/icon/color.jpg">
+                        <img src="img/icon/color.jpg">
+                   </a>
+                   <div class="desc">Color</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery"  width="600" height="400">
+                    <a target="_blank" href="img/icon/color_dark.jpg">
+                        <img src="img/icon/color_dark.jpg">
+                   </a>
+                </div>
+                <div class="desc">Shade</div>
+            </div>
+        </section>
+        <br>
+        <div class="clearfix"></div>
+    </div>
+    <!-- Page content end-->
+    
+    <!-- Page foot begin-->
+    {{> footer}}
+    <!-- Page foot end-->
+</div>
+<div class="overlap"></div>
+<!--Side Bar -->
+<div id="sidebar">
+    {{> sideBar}}
+</div>
+
+</body>
+</html>

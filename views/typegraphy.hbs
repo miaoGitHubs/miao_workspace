@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+    <link rel="stylesheet" type="text/css" href="/css/photos.css" />
+</head>
+<body>
+<div class="main-wrapper">
+    <!-- nav -->
+    <div class="sticky">
+    {{> navBar}}
+    </div>
+    <!-- /nav -->
+    <!-- Page content begin-->
+    <div class="content">
+        <section class="titleSection">
+            <div class="pageName">Typegraphy</div>
+        </section>
+        <section class="first">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/type/miao.jpg">
+                        <img src="img/type/miao.jpg" width="600px" height="500px">
+                   </a>
+                   <div class="desc">Miao</div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <div class="clearfix"></div>
+    </div>
+    <!-- Page content end-->
+    
+    <!-- Page foot begin-->
+    {{> footer}}
+    <!-- Page foot end-->
+</div>
+<div class="overlap"></div>
+<!--Side Bar -->
+<div id="sidebar">
+    {{> sideBar}}
+</div>
+
+</body>
+</html>

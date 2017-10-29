@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+    <link rel="stylesheet" type="text/css" href="/css/photos.css" />
+</head>
+<body>
+<div class="main-wrapper">
+    <!-- nav -->
+    <div class="sticky">
+    {{> navBar}}
+    </div>
+    <!-- /nav -->
+    <!-- Page content begin-->
+    <div class="content">
+        <section class="titleSection">
+            <div class="pageName">Photo</div>
+        </section>
+        <section class="first">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic03.jpg">
+                        <img src="img/pic/pic03.jpg" width="600" height="400">
+                   </a>
+                   <div class="desc">Antelope Canyon</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic06.jpg">
+                        <img src="img/pic/pic06.jpg" width="600" height="400">
+                   </a>
+                   <div class="desc">Key West</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic10.jpg">
+                        <img src="img/pic/pic10.jpg" width="600" height="400">
+                   </a>
+                   <div class="desc">Antelope Canyon</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic01.jpg">
+                        <img src="img/pic/pic01.jpg" width="600" height="400">
+                   </a>
+                   <div class="desc">Key West</div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="second">
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic02.jpg">
+                        <img src="img/pic/pic02.jpg" alt="Forest" width="600" height="400">
+                   </a>
+                    <div class="desc">Manhattan</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic05.jpg">
+                        <img src="img/pic/pic05.jpg" alt="Forest" width="600" height="400">
+                   </a>
+                    <div class="desc">Manhattan</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic09.jpg">
+                        <img src="img/pic/pic09.jpg" alt="Forest" width="600" height="400">
+                   </a>
+                    <div class="desc">Stone Mountian</div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="img/pic/pic07.jpg">
+                        <img src="img/pic/pic07.jpg" alt="Forest" width="600" height="400">
+                   </a>
+                    <div class="desc">Key West</div>
+                </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+    </div>
+    <!-- Page content end-->
+    
+    <!-- Page foot begin-->
+    {{> footer}}
+    <!-- Page foot end-->
+</div>
+<div class="overlap"></div>
+<!--Side Bar -->
+<div id="sidebar">
+    {{> sideBar}}
+</div>
+
+</body>
+</html>

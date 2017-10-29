@@ -1,0 +1,182 @@
+/* Slideshow container */
+.slideshow-container {
+	  top:30px;
+    width: 60%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none ;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+  width: auto;
+  margin-top: -5%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.slideshow-container img{
+  margin-top:5%;
+  resize: both;
+	width: 700px;
+	height: 450px;
+}
+
+.dotul{
+    text-align:center;
+    margin-top: -5%;
+}
+
+.dotul li{
+	display: inline;
+}
+
+.active, .dot:hover {
+  background-color: #555;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .5} 
+  to {opacity: 1}
+}
+
+/**
+    third
+*/
+.third-section {
+  width: 100%;
+  margin-top: 100px;
+  padding: 80px;
+  background:#588E95;
+  color: #F6EDD3;
+  text-align: center;
+}
+
+.third-section .heading-wrapper{
+  text-align: center;
+}
+
+.third-section .hr{
+    background:url(/img/frame.png);
+    background-repeat: repeat-x ;
+    background-size: 20%;
+    width:65%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card{
+    background-color: rgba(0,0,0,0.30);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.card:hover {
+    background-color: rgba(0,0,0,0.50);
+}
+
+.card h2{
+    padding-top: 40%;
+}
+
+.card h2 a{
+    text-decoration: none;
+}
+
+.responsive {
+    margin: 1%;
+    float: left;
+    width: 23%;
+    display: inline-block;  
+}
+
+@media only screen and (max-width: 1250px){
+    .responsive {
+        width: 47%;
+    }
+
+    .first{
+      margin-left: 18%;
+    }
+
+    .slideshow-container img{
+        margin-top:10%;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .responsive {
+        width: 100%;
+    }
+
+    .first{
+      margin-left: 15%;
+    }
+
+    .slideshow-container img{
+        margin-top:10%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .first{
+      margin-left: 8%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}

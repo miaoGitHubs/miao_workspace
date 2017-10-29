@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" type="text/css" href="/css/projects.css" />
+</head>
+<body>
+<div class="main-wrapper">
+    <!-- nav -->
+    <div class="sticky">
+    {{> navBar}}
+    </div>
+    <!-- /nav -->
+
+    <!-- Page head begin-->
+    <header>
+        <div id="banner">
+            <div class="inner">
+                <img src=""/>
+                <p class="sub-heading">Miao`s Projct</p>
+            </div>
+        </div>
+    </header>
+    <!-- Page head end-->
+    <!-- Page content begin-->
+    <div class="content">
+        <section class="first-section">
+            <div class="article-preview">
+                <div class="img-section">
+                    <img src="img/pic/expriement.png"alt="">
+                </div>
+                <div class="text-section">
+                    <div class="sub-heading">VR Game </div>
+                    <p>(05/2015-07/2016) </p>
+                </div>
+            </div>
+            <div class="article-preview">
+                <div class="text-section">
+                    <div class="sub-heading">Real-time JIRA and Splunk Connector</div>
+                    <p>(09/2016-02/2017)</p>
+                </div>
+                <div class="img-section">
+                    <p>
+                        Splunk is a web app for searching, monitoring, and analyzing injected data. So this plugin is the connection between JIRA and Splunk which help to inject JIRA`s data into Splunk. In the Splunk side, I helped to analyzed data and generated data chart. In the JIRA side, I was in charge of implementing front end features. We using JavaScript, JQuery, AJAX, Knockout.js in front end development. In addition, I was using Selenium to auto test front end components.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="article-preview">
+                <div class="img-section">
+                    <p>
+                        This project is for our client. Based on their requests, we created custom configurations for mail handler. Based on this custom mail handler, our client can generate new issue and update existed issues in JIRA by their clients sending email to their email server. I was in charge of picking up useful information from email by using regex expression, and convert these strings into JIRA format.
+                    </p>
+                </div>
+                <div class="text-section">
+                    <div class="sub-heading">Custom Mail Handler</div>
+                    <p>(03/2017-05/2017)</p>
+                </div>
+            </div>
+            <div class="article-preview">
+                <div class="text-section">
+                    <div class="sub-heading">Smart Handler</div>
+                    <p>(06/2017-10/2017)</p>
+                </div>
+                <div class="img-section">
+                    <p>
+                        This project is advance mail handler. We added more features in it. Users rather than sending complex content to email server, they can use key-value pair as format. Based on their key-value pair, handler can generate related issues or update issues. Also, we allowed users to set score for each action in JIRA, so that we calculated the amount of score and then stimulate other actions.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    <!-- Page content end-->
+    <!-- Page foot begin-->
+    {{> footer}}
+    <!-- Page foot end-->
+</div>
+    <div class="overlap"></div>
+<!--Side Bar -->
+<div id="sidebar">
+	{{> sideBar}}
+</div>
+<!--Go Top -->
+<img class="backTotop" src="img/icon/top.png" />
+
+</body>
+</html>
+</html>
