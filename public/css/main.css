@@ -41,7 +41,7 @@ p{
 }
 
 .main-wrapper{
-	background: #444 cloudinary.image("banner_zycrey.jpg");
+	background: #444 url(http://res.cloudinary.com/miaocloud/image/upload/v1509318351/banner_zycrey.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
