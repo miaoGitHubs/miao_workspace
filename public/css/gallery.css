@@ -139,12 +139,15 @@
     display: inline-block;  
 }
 
-@media only screen and (min-width: 1600px){
+@media only screen and (min-width: 1800px){
     .first{
-      margin-left: 25%;
+      margin-left: 20%;
     }
     .slideshow-container img{
-      height: 550px;
+      height: 650px;
+    }
+    .third-section .hr{
+      background-size: 18%;
     }
 }
 
@@ -159,7 +162,7 @@
 
     .slideshow-container img{
         margin-top:10%;
-        height: 350px;
+        height: 400px;
     }
 }
 

@@ -223,6 +223,14 @@
     to {background-color: rgba(0,0,0,0.01)}
 }
 
+@media only screen and (max-width: 1800px){
+    .first-section .hr{
+    	background-size: 18%;
+    }
+    .third-section .hr{
+        background-size: 18%;
+    }
+}
 
 @media only screen and (max-width: 1250px){
 	.article-preview > div{
