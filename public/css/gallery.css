@@ -139,6 +139,12 @@
     display: inline-block;  
 }
 
+@media only screen and (min-width: 2000px){
+    .first{
+      margin-left: 25%;
+    }
+}
+
 @media only screen and (max-width: 1250px){
     .responsive {
         width: 47%;
