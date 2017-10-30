@@ -52,7 +52,7 @@
   margin-top:5%;
   resize: both;
 	width: 700px;
-	height: 450px;
+	height: 500px;
 }
 
 .dotul{
@@ -141,13 +141,13 @@
 
 @media only screen and (min-width: 1800px){
     .first{
-      margin-left: 20%;
+      margin-left: 15%;
     }
     .slideshow-container img{
-      height: 650px;
+      height: 700px;
     }
     .third-section .hr{
-      background-size: 18%;
+      background-size: 16%;
     }
 }
 
@@ -162,7 +162,7 @@
 
     .slideshow-container img{
         margin-top:10%;
-        height: 400px;
+        height: 450px;
     }
 }
 
