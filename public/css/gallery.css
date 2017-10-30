@@ -139,9 +139,12 @@
     display: inline-block;  
 }
 
-@media only screen and (min-width: 2000px){
+@media only screen and (min-width: 1600px){
     .first{
       margin-left: 25%;
+    }
+    .slideshow-container img{
+      height: 550px;
     }
 }
 
