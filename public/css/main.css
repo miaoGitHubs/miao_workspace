@@ -147,8 +147,10 @@ nav div.logo a{
 	top:160px;
 }
 
-#banner .inner img{
+#banner .inner .icons{
 	margin:0;
+	width: 60px;
+	height: 60px;
 	color: #F6EDD3;
 }
 
@@ -206,7 +208,7 @@ nav div.logo a{
 }
 
 .spaceHolder{
-    height: 200px;
+    height: 100px;
 }
 
 
