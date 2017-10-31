@@ -135,23 +135,21 @@ nav div.logo a{
 */
 
 #banner{
-	min-height:600px;
+	min-height:650px;
 }
 
 #banner .inner{
 	max-width:300px;
 	text-align: center;
-	color:#F6EDD3;
+	color:#102F4A;
 	margin:0 auto;
 	position:relative;
 	top:160px;
 }
 
 #banner .inner .icons{
-	margin:0;
 	width: 60px;
 	height: 60px;
-	color: #F6EDD3;
 }
 
 #banner button{
@@ -159,11 +157,6 @@ nav div.logo a{
 	background: #629EA6;
 	color:#F6EDD3;
 	padding:14px 40px;
-}
-
-#banner .inner .try{
-	margin-top: 300px;
-	color: #F6EDD3;
 }
 
 .sub-heading{

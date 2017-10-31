@@ -1,54 +1,6 @@
 /**
     banner
 */
-
-#banner{
-	min-height:650px;
-}
-
-#banner .inner{
-	max-width:300px;
-	text-align: center;
-	color:#F6EDD3;
-	margin:0 auto;
-	position:relative;
-	top:160px;
-}
-
-#banner .inner img{
-	margin:0;
-	color: #F6EDD3;
-}
-
-#banner button{
-	border:none;
-	background: #629EA6;
-	color:#F6EDD3;
-	padding:14px 40px;
-}
-
-.sub-heading{
-	line-height:30px;
-	margin:30px 0;
-}
-
-#main-btn{
-	padding:14px 28px;
-	font-size: 15px;
-	letter-spacing: 4px;
-	border-radius: 20px 5px;
-	background: #629EA6;
-}
-
-#main-btn:hover{
-    background: #102F4A;
-    opacity: 0.8;
-}
-
-#main-btn a{
-	text-decoration:none;
-}
-
 .img-circle {
 	width: 80%;
 	height: 80%;
