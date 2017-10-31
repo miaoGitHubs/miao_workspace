@@ -15,10 +15,8 @@ ul{
 	border:none;
 }
 
-h1{
-	padding: 12px;
-	border-top: 2px solid #fff;
-	border-bottom: 2px solid #fff;
+a{
+	text-decoration: none;
 }
 
 h2{
