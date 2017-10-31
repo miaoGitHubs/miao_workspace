@@ -209,6 +209,7 @@ nav div.logo a{
     height: 200px;
 }
 
+
 /**
     footer
 */
@@ -309,6 +310,12 @@ ul .share-group{
 	background:transparent;
 	width: 70px;
 	height: 60px;
+}
+
+@media only screen and (max-width: 1500px){
+    .spaceHolder{
+        height: 250px;
+    }
 }
 
 
