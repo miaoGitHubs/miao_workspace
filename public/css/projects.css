@@ -51,20 +51,6 @@
 	margin-left: 5px;
 }
 
-.text-section p{
-	font-size:15px;
-	letter-spacing: 1px;
-	animation-name: moving;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes moving {
-    0% {margin-left: 0%;}
-    50% {margin-left: 60%;}
-    100% {margin-left: 0%;}
-}
-
 .text-section > * {
 	max-width: 90%;
 }
