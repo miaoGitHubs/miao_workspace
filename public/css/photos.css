@@ -11,11 +11,15 @@
     height: 300px;
 }
 
+.goback{
+    font-size: 30px;
+}
+
 .pageName{
     color: #102F41;
     padding-top:150px;
     margin-left:50px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 * {
@@ -42,26 +46,91 @@ div.desc {
     padding: 15px;
     text-align: center;
     background-color: #ccc;
-    height: 50px;
+    height: 60px;
     color: #102F41;
 }
 
-.responsive {
-    margin: 1%;
-    float: left;
-    width: 23%;
+.photos{
+    margin-left: 10%;
 }
 
-@media only screen and (max-width: 700px){
+.responsive {
+    margin: 3%;
+    float: left;
+    width: 40%;
+}
+
+@media only screen and (max-width: 1800px){
+    nav{
+        width: 1000px;
+        margin: auto;
+    }
+
+    .content{
+        width: 1000px;
+        margin: auto;
+    }
+
+    footer{
+        width: 1000px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1250px){
+    nav{
+        width: 800px;
+        margin: auto;
+    }
+
+    .content{
+        width: 800px;
+        margin: auto;
+    }
+
+    .photos{
+        margin-left: 13%;
+    }
+
+    footer{
+        width: 800px;
+        margin: auto;
+    }
+
     .responsive {
-        width: 48%;
+        width: 80%;
         margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    nav{
+        width: 100%;
+    }
+
+    .content{
+        width: 700px;
+        margin: auto;
+    }
+
+    .photos{
+        margin: auto;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    .responsive {
+        width: 60%;
+        margin: 6px 100px;
     }
 }
 
 @media only screen and (max-width: 500px){
     .responsive {
-        width: 100%;
+        width: 51%;
+        margin: 6px 30px;
     }
 }
 
