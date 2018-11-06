@@ -148,6 +148,10 @@
     grid-row-gap: 10px;
 }
 
+.card h2{
+	margin-top:35%;
+}
+
 .card:nth-child(odd){
 	text-align: center;
 	background-color: rgba(0,0,0,0.12);
@@ -249,13 +253,10 @@
 	    font-size:15px;
     }
 
-    .card:nth-child(even) {
-	    display: none;
-    }
-
-    .card:nth-child(odd) p{
-	    font-size: 15px;
-    }
+	.card h2{
+		margin-top: 25%;
+		font-size: 25px;
+	}
 }
 
 @media only screen and (max-width: 500px){
@@ -268,12 +269,8 @@
 	    display: none;
     }
 
-    .card:nth-child(odd) h2{
-	    margin-top:40%;
-	    font-size: 18px;
-    }
-
-    .card:nth-child(odd) p{
-	    display: none;
+    .card h2{
+	    margin-top: 45%;
+	    font-size: 20px;
     }
 }

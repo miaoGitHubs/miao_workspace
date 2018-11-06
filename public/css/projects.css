@@ -59,8 +59,40 @@
 	background-color: rgba(255,255,255,0.2);
 }
 
+@media only screen and (max-width: 1800px){
+	nav{
+		width: 1000px;
+		margin: auto;
+	}
+
+	.content{
+		width: 1000px;
+		margin: auto;
+	}
+
+	footer{
+		width: 1000px;
+		margin: auto;
+	}
+}
+
 
 @media only screen and (max-width: 1250px){
+	nav{
+		width: 800px;
+		margin: auto;
+	}
+
+	.content{
+		width: 800px;
+		margin: auto;
+	}
+
+	footer{
+		width: 800px;
+		margin: auto;
+	}
+
 	.article-preview > div{
         height: 300px;
     }
@@ -70,6 +102,14 @@
 }
 
 @media only screen and (max-width: 800px){
+    nav{
+        width: 100%;
+    }
+
+    footer{
+        width: 100%;
+    }
+
 	.article-preview > div{
         height: 200px;
     }
@@ -78,7 +118,7 @@
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 500px){
     .first-section .img-section p{
 	    display: none;
     }
