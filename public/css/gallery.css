@@ -137,6 +137,38 @@
     display: inline-block;
 }
 
+@media only screen and (min-width: 1800px){
+    
+    nav{
+        width: 1000px;
+        margin: auto;
+    }
+
+    .gallery{
+        height: 600px;
+        width: 1000px;
+    }
+
+    footer{
+        width: 1000px;
+        margin: auto;
+    }
+
+    .circle-section {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .slideshow-container img{
+        width: 800px;
+        height: 450px;
+    }
+
+    .circle-section .hr{
+        background-size: 16%;
+    }
+}
+
 @media only screen and (max-width: 1800px){
     nav{
         width: 1000px;
@@ -145,6 +177,7 @@
 
     .gallery{
         height: 600px;
+        width: 1000px;
     }
 
     footer{

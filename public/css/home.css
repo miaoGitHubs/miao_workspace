@@ -180,6 +180,30 @@
     to {background-color: rgba(0,0,0,0.01)}
 }
 
+@media only screen and (min-width: 1800px){
+	nav{
+		width: 1000px;
+		margin: auto;
+	}
+
+	footer{
+		width: 1000px;
+		margin: auto;
+	}
+
+	.content{
+		width:1000px;
+		margin: auto;
+	}
+
+	.first-section .hr{
+		background-size: 16%;
+	}
+	.third-section .hr{
+		background-size: 16%;
+	}
+}
+
 @media only screen and (max-width: 1800px){
 	nav{
 		width: 1000px;
