@@ -146,7 +146,10 @@
 
     .gallery{
         height: 600px;
-        width: 1000px;
+    }
+
+    .mySlides img{
+        width:800px;
     }
 
     footer{
@@ -177,7 +180,10 @@
 
     .gallery{
         height: 600px;
-        width: 1000px;
+    }
+
+    .mySlides img{
+        width:800px;
     }
 
     footer{
@@ -210,6 +216,10 @@
         height: 550px;
     }
 
+    .mySlides img{
+        width:100%;
+    }
+
     footer{
         width: 800px;
         margin: auto;
@@ -233,6 +243,10 @@
 
     .gallery{
         height: 400px;
+    }
+
+    .mySlides img{
+        width:100%;
     }
 
     footer{
