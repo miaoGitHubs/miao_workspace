@@ -149,7 +149,7 @@
     }
 
     .mySlides img{
-        width:800px;
+        width:100%;
     }
 
     footer{
@@ -183,7 +183,8 @@
     }
 
     .mySlides img{
-        width:800px;
+        width:100%;
+        margin-left: -15px;
     }
 
     footer{
