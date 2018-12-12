@@ -2,6 +2,7 @@
     banner
 */
 .img-circle {
+	margin-top: -50px;
 	width: 80%;
 	height: 80%;
     border-radius: 50%;
