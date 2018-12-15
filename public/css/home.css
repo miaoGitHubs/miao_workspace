@@ -150,13 +150,13 @@
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.card h2{
-	margin-top:35%;
-}
-
 .card{
 	min-height: 250px;
 	max-width: 500px;
+}
+
+.card h2{
+	margin-top:35%;
 }
 
 .card:nth-child(odd){

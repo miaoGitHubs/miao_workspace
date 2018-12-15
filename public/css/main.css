@@ -261,14 +261,15 @@ ul .share-group{
 }
 
 #sidebar{
-	width:200px;
-	top:0;
-	right:-300px;
-	bottom:0;
 	background:#CCD9CE;
+	width:200px;
+	hight:300px;
+	top:50px;
+	right:-200px;
 	position: fixed;
+	border-radius: 5px;
 	color: #102F4A;
-	padding: 20px 0;
+	padding: 10px 0;
 	transition: right 0.5s;
 	z-index: 11;
 }
@@ -302,12 +303,6 @@ ul .share-group{
 	background:transparent;
 	width: 70px;
 	height: 60px;
-}
-
-@media only screen and (max-width: 1500px){
-    .spaceHolder{
-        height: 250px;
-    }
 }
 
 @media only screen and (max-width: 800px){
