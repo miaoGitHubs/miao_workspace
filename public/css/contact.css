@@ -1,5 +1,6 @@
 .discription{
 	margin-top: -150px;
+	width: 100%;
 	background:#629EA6 ;
 	text-align: center;
 	color: #F6EDD3;
@@ -32,7 +33,7 @@
 		margin: auto;
 	}
 
-	.content{
+	.discription{
 		width: 1000px;
 		margin: auto;
 	}
@@ -49,7 +50,7 @@
 		margin: auto;
 	}
 
-	.content{
+	.discription{
 		width: 1000px;
 		margin: auto;
 	}
@@ -67,7 +68,7 @@
 		margin: auto;
 	}
 
-	.content{
+	.discription{
 		width: 800px;
 		margin: auto;
 	}
@@ -90,6 +91,10 @@
 		width: 100%;
 	}
 
+	.discription {
+		width: 100%;
+	}
+
 	footer{
 		width: 100%;
 	}
@@ -97,4 +102,10 @@
 
 @media only screen and (max-width: 500px){
 
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
 }

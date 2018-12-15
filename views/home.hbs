@@ -3,33 +3,32 @@
 <head>
     {{> header}}
     <link rel="stylesheet" type="text/css" href="/css/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <div class="main-wrapper">
     <!-- nav -->
     <div class="sticky">
-    {{> navBar}}
+        {{> navBar}}
     </div>
     <!-- /nav -->
 
     <!-- Page head begin-->
-    <header>
-    	<div id="banner">
-    		<div class="inner">
-    		    <img class="img-circle" src="https://res.cloudinary.com/miaocloud/image/upload/v1538321051/headshot_qezt3r.jpg"/>
-    			<p class="sub-heading">Welcome to Miaos website</p>
-    			<button id="main-btn"><a href="/file/Miao Dong.pdf" download="Miao Dong">My Resume</a></button>
-                <div class="godown"><a href="#"><img src="img/icon/top.png"/></a></div>
-    		</div>
+    <div id="banner">
+        <div class="inner">
+            <img class="img-circle" src="https://res.cloudinary.com/miaocloud/image/upload/v1538321051/headshot_qezt3r.jpg"/>
+            <p class="sub-heading">Welcome to Miaos website</p>
+            <button id="main-btn"><a href="/file/Miao Dong.pdf" download="Miao Dong">My Resume</a></button>
+            <div class="godown"><a href="#"><img src="img/icon/top.png"/></a></div>
+        </div>
 
-    	</div>
-    </header>
+    </div>
     <!-- Page head end-->
     <!-- Page content begin-->
     <div class="content">
         <section class="first-section">
-        	<div class="wrpper">
+        	<div class="wrapper">
                 <div>
                     <h2>Inspiration comes from everywhere</h2>
                     <div class="hr"></div>
@@ -40,7 +39,7 @@
         <section class="second-section">
         	<div class="article-preview">
         	    <div class="img-section">
-        	        <img src="http://res.cloudinary.com/miaocloud/image/upload/v1509318387/pic01_vfkyim.jpg"alt="">
+        	        <img src="http://res.cloudinary.com/miaocloud/image/upload/v1509318387/pic01_vfkyim.jpg" alt="">
         	    </div>
         	    <div class="text-section">
         	        <div class="sub-heading">Key West</div>
@@ -49,28 +48,28 @@
         	        </p>
         	    </div>
         	</div>
-        	<div class="article-preview">
-        	    <div class="text-section">
-        	        <div class="sub-heading">Manhattan</div>
-        	        <p>
-        	            The prosperous internationalized metropolis
-        	        </p>
-        	    </div>
-        	    <div class="img-section">
-        	        <img src="http://res.cloudinary.com/miaocloud/image/upload/v1509318347/pic02_afbi1r.jpg"alt="">
-        	    </div>
+            <div class="article-preview">
+                <div class="text-section">
+                    <div class="sub-heading">Manhattan</div>
+                    <p>
+                        The prosperous internationalized metropolis
+                    </p>
+                </div>
+                <div class="img-section">
+                    <img src="http://res.cloudinary.com/miaocloud/image/upload/v1509318347/pic02_afbi1r.jpg" alt="">
+                </div>
             </div>
-        	<div class="article-preview">
-        	    <div class="img-section">
-        	        <img src="http://res.cloudinary.com/miaocloud/image/upload/v1509318351/pic03_yuytnu.jpg"alt="">
-        	    </div>
-        	    <div class="text-section">
-        	        <div class="sub-heading">Antelope Canyon</div>
-        	        <p>
-        	        	The gorgeous creation by nature
-        	        </p>
-        	    </div>
-        	</div>
+            <div class="article-preview">
+                <div class="img-section">
+                    <img src="http://res.cloudinary.com/miaocloud/image/upload/v1509318351/pic03_yuytnu.jpg" alt="">
+                </div>
+                <div class="text-section">
+                    <div class="sub-heading">Antelope Canyon</div>
+                    <p>
+                        The gorgeous creation by nature
+                    </p>
+                </div>
+            </div>
         </section>
         <section class="third-section">
         	<div class="heading-wrapper">
@@ -107,6 +106,7 @@
                     <h2>Bootstrap</h2>
                 </div>
         	</section>
+            <div class="clearfix"></div>
         </section>
     </div>
     <!-- Page content end-->
@@ -117,7 +117,7 @@
 <div class="overlap"></div>
 <!--Side Bar -->
 <div id="sidebar">
-	{{> sideBar}}
+    {{> sideBar}}
 </div>
 <!--Go Top -->
 <a href="#"><img class="backTotop" src="img/icon/top.png" /></a>

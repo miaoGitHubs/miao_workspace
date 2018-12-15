@@ -217,7 +217,6 @@ ul .share-group{
 	display: block;
 	width:1080px;
 	margin:0 auto;
-	padding: 50px;
 }
 
 .share-group li{
@@ -311,13 +310,20 @@ ul .share-group{
     }
 }
 
-
 @media only screen and (max-width: 800px){
     #sidebar_trigger img {
         display: inline-block;
     }
+
     nav ul{
 	    display: none;
     }
+
+	.backTotop{
+		display: none;
+	}
 }
 
+@media only screen and (max-width: 500px){
+
+}

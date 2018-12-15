@@ -85,7 +85,7 @@
 .second-section .text-section{
 	width: 55%;
 	position: relative;
-	left:5%;
+	padding-left: 25px;
 }
 
 .article-preview > div{
@@ -144,20 +144,25 @@
 
 .the_grid{
 	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
 	grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
 }
 
 .card h2{
 	margin-top:35%;
 }
 
+.card{
+	min-height: 250px;
+	max-width: 500px;
+}
+
 .card:nth-child(odd){
 	text-align: center;
 	background-color: rgba(0,0,0,0.12);
-	min-height: 250px;
-	max-width: 500px;
+
 }
 
 .card:nth-child(odd):hover{
@@ -167,8 +172,6 @@
 .card:nth-child(even){
 	text-align: center;
 	background-color: rgba(0,0,0,0.24);
-	min-height: 250px;
-	max-width: 500px;
 }
 
 .card:nth-child(even):hover{
@@ -197,9 +200,14 @@
 		margin: auto;
 	}
 
+	.card{
+		min-height: 250px;
+	}
+
 	.first-section .hr{
 		background-size: 16%;
 	}
+
 	.third-section .hr{
 		background-size: 16%;
 	}
@@ -221,9 +229,14 @@
 		margin: auto;
 	}
 
+	.card{
+		min-height: 230px;
+	}
+
     .first-section .hr{
     	background-size: 16%;
     }
+
     .third-section .hr{
         background-size: 16%;
     }
@@ -245,12 +258,29 @@
 		margin: auto;
 	}
 
+	.card{
+		min-height: 200px;
+	}
+
+	.the_grid{
+		margin-left: auto;
+		margin-right: auto;
+		width: 600px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
 	.article-preview > div{
         height: 300px;
     }
+
     .card:nth-child(odd) p{
 	    font-size: 15px;
     }
+
+	.card h2{
+		margin-top: 35%;
+		font-size: 22px;
+	}
 }
 
 @media only screen and (max-width: 800px){
@@ -266,12 +296,19 @@
 		width: 100%;
 	}
 
+	.card{
+		min-height: 120px;
+	}
+
 	.article-preview > div{
         height: 200px;
     }
 
     .the_grid{
-	    grid-template-columns: repeat(1, 1fr);
+		margin-left: auto;
+		margin-right: auto;
+		width: 360px;
+	    grid-template-columns: repeat(3, 1fr);
     }
 
     .text-section p{
@@ -280,7 +317,7 @@
 
 	.card h2{
 		margin-top: 25%;
-		font-size: 25px;
+		font-size: 20px;
 	}
 }
 
@@ -294,8 +331,25 @@
 	    display: none;
     }
 
+	.the_grid{
+		margin-left: auto;
+		margin-right: auto;
+		width: 150px;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.card{
+		min-height: 150px;
+	}
+
     .card h2{
-	    margin-top: 45%;
-	    font-size: 20px;
+	    margin-top: 35%;
+	    font-size: 18px;
     }
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: table;
 }
