@@ -203,14 +203,6 @@
 	.card{
 		min-height: 250px;
 	}
-
-	.first-section .hr{
-		background-size: 16%;
-	}
-
-	.third-section .hr{
-		background-size: 16%;
-	}
 }
 
 @media only screen and (max-width: 1800px){
@@ -232,14 +224,6 @@
 	.card{
 		min-height: 230px;
 	}
-
-    .first-section .hr{
-    	background-size: 16%;
-    }
-
-    .third-section .hr{
-        background-size: 16%;
-    }
 }
 
 @media only screen and (max-width: 1250px){
@@ -288,16 +272,24 @@
 		width: 100%;
 	}
 
-	footer{
-		width: 100%;
-	}
-
 	.content{
 		width: 100%;
 	}
 
-	.card{
-		min-height: 120px;
+	footer{
+		width: 100%;
+	}
+
+	.text-section p{
+		font-size:15px;
+	}
+
+	.first-section .hr{
+		width: 80%;
+	}
+
+	.third-section .hr{
+		width: 100%;
 	}
 
 	.article-preview > div{
@@ -311,9 +303,9 @@
 	    grid-template-columns: repeat(3, 1fr);
     }
 
-    .text-section p{
-	    font-size:15px;
-    }
+	.card{
+		min-height: 120px;
+	}
 
 	.card h2{
 		margin-top: 25%;
@@ -331,15 +323,19 @@
 	    display: none;
     }
 
+	.second-section .text-section{
+		width: 90%;
+	}
+
 	.the_grid{
 		margin-left: auto;
 		margin-right: auto;
-		width: 150px;
+		width: 200px;
 		grid-template-columns: repeat(1, 1fr);
 	}
 
 	.card{
-		min-height: 150px;
+		min-height: 200px;
 	}
 
     .card h2{

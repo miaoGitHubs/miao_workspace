@@ -161,7 +161,7 @@
     }
 
     .circle-section .hr{
-        background-size: 16%;
+        background-size: 20%;
     }
 }
 
@@ -188,7 +188,7 @@
     }
 
     .circle-section .hr{
-      background-size: 16%;
+      background-size: 20%;
     }
 }
 
@@ -226,7 +226,7 @@
         height: 350px;
     }
 
-    footer{
+    footer {
         width: 100%;
     }
 
@@ -234,6 +234,10 @@
         width: 100%;
     }
 
+    .circle-section .hr{
+        background-size: 20%;
+        width: 100%
+    }
 }
 
 @media only screen and (max-width: 600px){
