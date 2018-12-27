@@ -10,9 +10,8 @@
   "author": "Miao Dong",
   "license": "ISC",
   "dependencies": {
-    "cloudinary": "",
     "express": "^4.14.0",
     "hbs": "^4.0.0",
-    "mongodb": "^2.2.19"
+    "mongodb": "^2.2.36"
   }
 }

@@ -1,9 +1,8 @@
 const express = require("express");
 const hbs = require('hbs');
-const cloudinary = require('cloudinary');
 const port = process.env.PORT || 3000;
 
-var app =express();
+let app =express();
 
 hbs.registerPartials(__dirname + "/views/partials");
 app.set('view engine', 'hbs');
@@ -12,7 +11,6 @@ app.use(express.static(__dirname +'/public'));
 hbs.registerHelper("currentYear", function() {
     return new Date().getFullYear();
 });
-
 
 app.get('/', (req, res, next)=>{
     res.render('home.hbs', {
