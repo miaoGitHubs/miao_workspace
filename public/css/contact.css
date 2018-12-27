@@ -1,3 +1,17 @@
+/*banner**/
+.rotate img{
+	-webkit-animation: rotation 0.5s 1 linear;
+}
+
+@-webkit-keyframes rotation {
+	from{
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+	}
+}
+
 .discription{
 	margin-top: -150px;
 	width: 100%;
