@@ -29,6 +29,47 @@
     <!-- Page head end-->
     <!-- Page content begin-->
     <div class="content">
+        <section class="leave_msg">
+            <div>
+                <h3>Leave Message to Miao</h3>
+                <div class="hr"></div>
+                <form action="/insert" method="post">
+                    <div class="input">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" />
+                    </div>
+                    <br/>
+                    <div class="input">
+                        <label for="msg">Message</label>
+                        <textarea type="text" id="msg" name="msg"></textarea>
+                    </div>
+                    <br/>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </section>
+        <section class="previous_msg">
+            <div>
+                <h3>Previous Message</h3>
+                <div class="hr"></div>
+                <div>
+                    {{# each items}}
+                        <article class="item">
+                            <div>
+                                <label>{{this.author}}</label>
+                                <span>{{this.msg}}</span>
+                            </div>
+                            <div></div>
+                        </article>
+                        <form action="/delete" method="post">
+                            <input id="id" name="id" value="{{this._id}}" style="display:none"/>
+                            <button type="submit"> Delete</button>
+                        </form>
+                        <br/>
+                    {{/each}}
+                </div>
+            </div>
+        </section>
         <section class="discription">
             <div class="hr"></div>
             <div class="dev">
@@ -49,6 +90,7 @@
                 </p>
             </div>
         </section>
+
     </div>
     <!-- Page content end-->
     <!-- Page foot begin-->

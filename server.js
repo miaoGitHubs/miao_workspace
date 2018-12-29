@@ -1,8 +1,20 @@
 const express = require("express");
 const hbs = require('hbs');
+const mongo = require('mongodb').MongoClient;
+const objectId = require('mongodb').ObjectID;
+const assert = require('assert');
+const bodyParser = require('body-parser'); //help to get req.body
 const port = process.env.PORT || 3000;
+let url = process.env.MONGODB_URI || 'mongodb://localhost:27017/Message';
 
 let app =express();
+
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
+
+app.use(bodyParser.json())
 
 hbs.registerPartials(__dirname + "/views/partials");
 app.set('view engine', 'hbs');
@@ -10,6 +22,48 @@ app.use(express.static(__dirname +'/public'));
 
 hbs.registerHelper("currentYear", function() {
     return new Date().getFullYear();
+});
+
+app.get('/get-data', (req, res, next)=>{
+
+});
+
+app.post('/insert', (req, res, next)=>{
+    console.log("req : " + req);
+    let item = {
+        msg: req.body.msg,
+        author: req.body.author,
+        createdOn: Date()
+    };
+
+    mongo.connect(url, (err, db)=>{
+        assert.equal(null, err);
+        db.collection('message').insertOne(item, (err, result)=>{
+            assert.equal(null, err);
+            console.log('Item inserted');
+            db.close();
+        })
+    });
+
+    res.redirect('/contact');
+});
+
+app.post('/update', (req, res, next)=>{
+
+});
+
+app.post('/delete', (req, res, next)=>{
+    var id = req.body.id;
+    console.log('id : ' + id);
+    mongo.connect(url, (err, db)=>{
+        assert.equal(null, err);
+        db.collection('message').deleteOne({"_id": objectId(id)}, (err, result)=>{
+            assert.equal(null, err);
+            console.log('Item deleted');
+            db.close();
+        })
+    })
+    res.redirect('/contact');
 });
 
 app.get('/', (req, res, next)=>{
@@ -56,9 +110,23 @@ app.get("/projects", (req, res)=>{
 });
 
 app.get("/contact", (req, res)=>{
-    res.render('contact.hbs', {
-        pageTitle:'Contact',
+    let resultArray = [];
+    mongo.connect(url, (err, db)=>{
+        assert.equal(null, err);
+        let cursor = db.collection('message').find();
+
+        cursor.forEach((doc, err)=>{
+            assert.equal(null, err);
+            resultArray.push(doc);
+        }, ()=>{
+            db.close();
+            res.render('contact.hbs', {
+                pageTitle:'Contact',
+                items:resultArray
+            });
+        })
     });
+
 });
 
 //bad -send back json with errorMessage
