@@ -267,6 +267,10 @@ button{
 	.previous_msg label{
 		display: none;
 	}
+
+    .createdDate{
+        display: block;
+    }
 }
 
 .clearfix:after {
