@@ -1,3 +1,13 @@
+button{
+	width: 80px;
+	height: 40px;
+	border: 1px solid #F6EDD3;
+	border-radius: 20px;
+	background: #629EA6;
+	color: #F6EDD3;
+	margin: 5px;
+}
+
 /*banner**/
 .rotate img{
 	-webkit-animation: rotation 0.5s 1 linear;
@@ -15,10 +25,14 @@
 /*message*/
 .leave_msg{
 	width: 100%;
-	background:#405F6E;
+	background:#629EA6;
 	text-align: center;
 	color: #F6EDD3;
 	padding: 50px 150px;
+}
+
+.leave_msg button{
+	background: #405F6E;
 }
 
 .leave_msg .hr{
@@ -28,7 +42,7 @@
     width:100%;
 }
 
-label{
+.leave_msg label{
     display:block;
     width:20%;
     text-align: right;
@@ -39,7 +53,7 @@ label{
 .leave_msg input{
     display: block;
     width: 30%;
-    border: 1px solid #999;
+    border: 1px solid #F6EDD3;
     border-radius: 5px;
 }
 
@@ -47,7 +61,7 @@ label{
     display: block;
     width: 60%;
     height: 100px;
-    border: 1px solid #999;
+    border: 1px solid #F6EDD3;
     border-radius: 5px;
 }
 
@@ -66,9 +80,27 @@ label{
     width:100%;
 }
 
-.previous_msg span{
-    display: block;
-    width: 60%;
+.previous_msg label{
+	display:block;
+	width:20%;
+	text-align: right;
+	float: left;
+	margin-right: 20px;
+}
+
+.previous_msg .text{
+	width: 90%;
+	display: block;
+	text-align: left;
+	margin: 5px;
+}
+
+.item{
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #F6EDD3;
+	border-radius: 5px;
 }
 
 /*description*/
@@ -83,7 +115,7 @@ label{
 .discription .hr{
 	background:url('/img/frame.png');
 	background-repeat: repeat-x;
-	background-size: 20%;
+	background-size: 18%;
 	width:80%;
 }
 
@@ -197,10 +229,20 @@ label{
 
 	.leave_msg{
 		width: 100%;
+		padding: 50px;
+	}
+
+	.leave_msg input{
+		width: 40%;
+	}
+
+	.leave_msg textarea{
+		width: 70%;
 	}
 
     .previous_msg{
         width: 100%;
+		padding: 50px;
     }
 
     .discription {
@@ -213,7 +255,18 @@ label{
 }
 
 @media only screen and (max-width: 500px){
+	.leave_msg input{
+		width: 150px;
+	}
 
+	.leave_msg textarea{
+		width: 80%;
+		margin-left:20px;
+	}
+
+	.previous_msg label{
+		display: none;
+	}
 }
 
 .clearfix:after {
