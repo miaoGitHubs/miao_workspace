@@ -4,11 +4,11 @@ const mongo = require('mongodb').MongoClient;
 const objectId = require('mongodb').ObjectID;
 const assert = require('assert');
 const bodyParser = require('body-parser'); //help to get req.body
+const moment = require('moment'); //deal with date format
 const port = process.env.PORT || 3000;
 let url = process.env.MONGODB_URI || 'mongodb://localhost:27017/Message';
 
 let app =express();
-
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -117,6 +117,7 @@ app.get("/contact", (req, res)=>{
 
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
+            doc.createdOn = moment(doc.createdOn).format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
             db.close();
