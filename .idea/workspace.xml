@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db37570a-c603-4e60-8fb5-5fc49d318278" name="Default" comment="updated technique">
-      <change afterPath="$PROJECT_DIR$/public/img/icon/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/icon/hamburger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/icon/twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/contact.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/contact.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/navBar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navBar.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/projects.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/projects.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/projects.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="49" column="90" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="90" />
+            <state relative-caret-position="91">
+              <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -249,7 +241,7 @@
       <workItem from="1548211187642" duration="124000" />
       <workItem from="1548384251354" duration="555000" />
       <workItem from="1549933442912" duration="19000" />
-      <workItem from="1556757324389" duration="4585000" />
+      <workItem from="1556757324389" duration="5128000" />
     </task>
     <task id="LOCAL-00001" summary="reomove some transform elements">
       <created>1521072781233</created>
@@ -283,7 +275,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121649000" />
+    <option name="totallyTimeSpent" value="122192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="1" width="1280" height="658" extended-state="0" />
@@ -568,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/projects.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="49" column="90" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="90" />
+        <state relative-caret-position="91">
+          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
         </state>
       </provider>
     </entry>
