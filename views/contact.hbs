@@ -62,8 +62,8 @@
                                 <label>Message : </label>
                                 <div class="text">{{this.msg}}</div>
                             </div>
-                            <form action="/delete" method="post" class="deleteBtn">
-                                <input id="id" name="id" value="{{this._id}}" style="display:none"/>
+                            <form action="/delete" method="post" class="deleteBtn" style="display: none;">
+                                <input disabled="true" id="id" name="id" value="{{this._id}}" style="display:none"/>
                                 <button type="submit"> Delete</button>
                             </form>
                         </article>
