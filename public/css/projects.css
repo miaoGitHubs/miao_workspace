@@ -1,4 +1,9 @@
 /*banner*/
+.link_icons{
+	width: 25px;
+	height: 25px;
+	margin-top: -10px;
+}
 .shake img{
 	animation: shake 0.5s;
 	animation-iteration-count: infinite;
