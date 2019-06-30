@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" type="text/css" href="/css/vr_project.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main-wrapper">
+    <!-- nav -->
+    <div class="sticky">
+        {{> navBar}}
+    </div>
+    <!-- /nav -->
+
+    <!-- Page head begin-->
+    <header>
+        <div id="banner">
+            <div class="inner">
+                <div>3D Audio in Virtual Environment</div>
+                <br>
+                <iframe class="video" src="https://www.youtube.com/embed/4URvMrt853M" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </header>
+    <!-- Page head end-->
+    <!-- Page content begin-->
+    <div class="content">
+
+        <section class="description">
+            <div class="hr"></div>
+            <div class="desc">
+                <p>This research analyzes if and how the Head Related Transfer Function (HRTF) can be used to support effective Human-Computer Interaction when people in a Virtual Environment (VE) without visual feedback.
+                    If sounds can be located in a VE by using HRTF only, designing and developing considerably safer but diversified training environments might greatly benefit individuals with visual impairments.
+                    To investigate this, we ran 2 usability studies:</p>
+                <ul class="items">
+                    <li>
+                        1) to ascertain whether the HRTF could provide sufficient position information in VEs.
+                    </li>
+                    <li>
+                        2) to learn whether the HRTF could provide sufficient distance and direction information in VEs.
+                    </li>
+                </ul>
+                <p>
+                    The results showed that a continuous audio feedback could help navigate in a VE without vision feedback.
+                </p>
+            </div>
+            <div class="expm_details">
+                <p>
+                    As the above video presents, this Experiment has three sections which provide different kind of audio help in virtual environment for player.
+                </p>
+                <ul class="items">
+                    <li>1) Continuous Path Sound Audio FeedBack: there is a bell sound at each turning point, player can follow this sound to navigate.</li>
+                    <li>2) Continuous Wall Alert and Path Sound Audio Feedback: player can always hear different pitch of wall alert which depends
+                       on the distance between the wall. Also they can generate bell sound to guide themselves.</li>
+                    <li>3) Wall Alert: player would hear the warning beeping only when they closed to wall.</li>
+                </ul>
+                <div>
+                    <a href="https://ieeexplore.ieee.org/document/7859538" target="_blank">See Publication 1</a>
+                </div>
+                <div>
+                    <a href="https://ieeexplore.ieee.org/document/7901608" target="_blank">See Publication 2</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- Page content end-->
+    <!-- Page foot begin-->
+    {{> footer}}
+    <!-- Page foot end-->
+</div>
+<div class="overlap"></div>
+<!--Side Bar -->
+<div id="sidebar">
+    {{> sideBar}}
+</div>
+<!--Go Top -->
+<a href="#"><img class="backTotop" src="img/icon/top.png" /></a>
+
+</body>
+</html>

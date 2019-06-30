@@ -109,6 +109,12 @@ app.get("/projects", (req, res)=>{
     });
 });
 
+app.get("/vr_project", (req, res)=>{
+    res.render('vr_project.hbs', {
+        pageTitle:'VR Project',
+    });
+});
+
 app.get("/contact", (req, res)=>{
     let resultArray = [];
     mongo.connect(url, (err, db)=>{

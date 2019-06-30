@@ -104,7 +104,7 @@ button{
 }
 
 /*description*/
-.discription{
+.description{
 	width: 100%;
 	background:#629EA6 ;
 	text-align: center;
@@ -112,23 +112,23 @@ button{
 	padding: 5px 0;
 }
 
-.discription .hr{
+.description .hr{
 	background:url('/img/frame.png');
 	background-repeat: repeat-x;
 	background-size: 18%;
 	width:80%;
 }
 
-.discription a{
+.description a{
 	text-decoration: none;
 	font-weight: bold;
 }
 
-.discription a:hover{
+.description a:hover{
 	color: #102F4A;
 }
 
-.discription div{
+.description div{
 	margin:10%;
 }
 
@@ -148,7 +148,7 @@ button{
         margin: auto;
     }
 
-	.discription{
+	.description{
 		width: 1000px;
 		margin: auto;
 	}
@@ -175,7 +175,7 @@ button{
         margin: auto;
     }
 
-	.discription{
+	.description{
 		width: 1000px;
 		margin: auto;
 	}
@@ -204,7 +204,7 @@ button{
     }
 
 
-    .discription{
+    .description{
 		width: 800px;
 		margin: auto;
 	}
@@ -245,7 +245,7 @@ button{
 		padding: 50px;
     }
 
-    .discription {
+    .description {
 		width: 100%;
 	}
 
