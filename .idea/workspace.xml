@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db37570a-c603-4e60-8fb5-5fc49d318278" name="Default" comment="updated technique">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="db37570a-c603-4e60-8fb5-5fc49d318278" name="Default" comment="updated technique" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +198,7 @@
       <workItem from="1625626288358" duration="402000" />
       <workItem from="1625626946311" duration="32000" />
       <workItem from="1634087620254" duration="317000" />
-      <workItem from="1634088072318" duration="1591000" />
+      <workItem from="1634088072318" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="reomove some transform elements">
       <created>1521072781233</created>
