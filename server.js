@@ -6,7 +6,7 @@ const assert = require('assert');
 const bodyParser = require('body-parser'); //help to get req.body
 const moment = require('moment'); //deal with date format
 const port = process.env.PORT || 3000;
-let url = process.env.MONGODB_URI || 'mongodb://localhost:27017/Message';
+let url = process.env.MONGODB_URI || 'mongodb://miao:dm123456@mernprojectdb-shard-00-00.hnp0y.mongodb.net:27017,mernprojectdb-shard-00-01.hnp0y.mongodb.net:27017,mernprojectdb-shard-00-02.hnp0y.mongodb.net:27017/test?ssl=true&replicaSet=mernprojectdb-shard-0&authSource=admin&retryWrites=true&w=majority';
 
 let app =express();
 
@@ -40,12 +40,26 @@ app.post('/insert', (req, res, next)=>{
         assert.equal(null, err);
         db.collection('message').insertOne(item, (err, result)=>{
             assert.equal(null, err);
-            console.log('Item inserted');
+            console.log('Item inserted !! : '+ result);
+            // refresh msg list
+            let resultArray = [];
+            let cursor = db.collection('message').find();
+            cursor.forEach((doc, err)=>{
+                assert.equal(null, err);
+                doc.createdOn = moment(new Date(doc.createdOn)).format('MM/DD/YYYY HH:mm:ss');
+                resultArray.push(doc);
+            }, ()=>{
+                db.close();
+                res.render('contact.hbs', {
+                    pageTitle:'Contact',
+                    items:resultArray
+                });
+            })
             db.close();
         })
     });
 
-    res.redirect('/contact');
+    // res.redirect('/contact');
 });
 
 app.post('/update', (req, res, next)=>{
@@ -123,7 +137,7 @@ app.get("/contact", (req, res)=>{
 
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
-            doc.createdOn = moment(doc.createdOn).format('MM/DD/YYYY HH:mm:ss');
+            doc.createdOn = moment(new Date(doc.createdOn)).format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
             db.close();

@@ -1,8 +1,11 @@
 ## miao_workspace
 This is my profile website
 
+## Start in local
+npm start
+
 ## Deploy
 Deployed my profile to heroku: https://miaoprofile.herokuapp.com/
 
-##github - access token (expired date:11/12/2021)
-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
+## Database
+Atlas Mongodb: mernprojectdb

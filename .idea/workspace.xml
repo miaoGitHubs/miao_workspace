@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db37570a-c603-4e60-8fb5-5fc49d318278" name="Default" comment="updated technique" />
+    <list default="true" id="db37570a-c603-4e60-8fb5-5fc49d318278" name="Default" comment="updated technique">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +132,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular_app" />
     <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../NodeJS/node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/views/icon.hbs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -198,7 +203,9 @@
       <workItem from="1625626288358" duration="402000" />
       <workItem from="1625626946311" duration="32000" />
       <workItem from="1634087620254" duration="317000" />
-      <workItem from="1634088072318" duration="2170000" />
+      <workItem from="1634088072318" duration="2582000" />
+      <workItem from="1641138237350" duration="901000" />
+      <workItem from="1641172754882" duration="3040000" />
     </task>
     <task id="LOCAL-00001" summary="reomove some transform elements">
       <created>1521072781233</created>
