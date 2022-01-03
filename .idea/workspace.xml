@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db37570a-c603-4e60-8fb5-5fc49d318278" name="Default" comment="updated technique">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +204,8 @@
       <workItem from="1634087620254" duration="317000" />
       <workItem from="1634088072318" duration="2582000" />
       <workItem from="1641138237350" duration="901000" />
-      <workItem from="1641172754882" duration="3040000" />
+      <workItem from="1641172754882" duration="4241000" />
+      <workItem from="1641178605795" duration="371000" />
     </task>
     <task id="LOCAL-00001" summary="reomove some transform elements">
       <created>1521072781233</created>

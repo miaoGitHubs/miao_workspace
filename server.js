@@ -46,7 +46,8 @@ app.post('/insert', (req, res, next)=>{
             let cursor = db.collection('message').find();
             cursor.forEach((doc, err)=>{
                 assert.equal(null, err);
-                doc.createdOn = moment(new Date(doc.createdOn)).format('MM/DD/YYYY HH:mm:ss');
+
+                doc.createdOn = moment.utc(new Date(doc.createdOn)).local().format('MM/DD/YYYY HH:mm:ss');
                 resultArray.push(doc);
             }, ()=>{
                 db.close();
@@ -137,7 +138,7 @@ app.get("/contact", (req, res)=>{
 
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
-            doc.createdOn = moment(new Date(doc.createdOn)).format('MM/DD/YYYY HH:mm:ss');
+            doc.createdOn = moment.utc(new Date(doc.createdOn)).local().format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
             db.close();
