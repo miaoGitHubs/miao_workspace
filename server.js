@@ -1,12 +1,12 @@
 const express = require("express");
 const hbs = require('hbs');
-const mongo = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 const objectId = require('mongodb').ObjectID;
 const assert = require('assert');
 const bodyParser = require('body-parser'); //help to get req.body
 const moment = require('moment'); //deal with date format
 const port = process.env.PORT || 3000;
-let url = process.env.MONGODB_URI || 'mongodb://miao:dm123456@mernprojectdb-shard-00-00.hnp0y.mongodb.net:27017,mernprojectdb-shard-00-01.hnp0y.mongodb.net:27017,mernprojectdb-shard-00-02.hnp0y.mongodb.net:27017/test?ssl=true&replicaSet=mernprojectdb-shard-0&authSource=admin&retryWrites=true&w=majority';
+let url = process.env.MONGODB_URI || 'mongodb+srv://miao:dm123456@webappscluster.feben.mongodb.net/profileappdb?retryWrites=true&w=majority';
 
 let app =express();
 
@@ -33,30 +33,30 @@ app.post('/insert', (req, res, next)=>{
     let item = {
         msg: req.body.msg,
         author: req.body.author,
-        createdOn: Date()
+        createdOn: moment.utc().format('MM/DD/YYYY HH:mm:ss')
     };
-
-    mongo.connect(url, (err, db)=>{
+    console.log(moment(new Date()).utc().format('MM/DD/YYYY HH:mm:ss'));
+    MongoClient.connect(url, {useNewUrlParser: true},(err, client)=>{
         assert.equal(null, err);
+        let db = client.db('profileappdb');
         db.collection('message').insertOne(item, (err, result)=>{
             assert.equal(null, err);
-            console.log('Item inserted !! : '+ result);
             // refresh msg list
             let resultArray = [];
             let cursor = db.collection('message').find();
             cursor.forEach((doc, err)=>{
                 assert.equal(null, err);
-
-                doc.createdOn = moment.utc(new Date(doc.createdOn)).local().format('MM/DD/YYYY HH:mm:ss');
+                let stillUtc = moment.utc(doc.createdOn).toDate();
+                doc.createdOn =  moment(stillUtc).local().format('MM/DD/YYYY HH:mm:ss');
                 resultArray.push(doc);
             }, ()=>{
-                db.close();
+                client.close();
                 res.render('contact.hbs', {
                     pageTitle:'Contact',
                     items:resultArray
                 });
             })
-            db.close();
+            client.close();
         })
     });
 
@@ -70,7 +70,7 @@ app.post('/update', (req, res, next)=>{
 app.post('/delete', (req, res, next)=>{
     var id = req.body.id;
     console.log('id : ' + id);
-    mongo.connect(url, (err, db)=>{
+    MongoClient.connect(url, {useNewUrlParser:true},(err, db)=>{
         assert.equal(null, err);
         db.collection('message').deleteOne({"_id": objectId(id)}, (err, result)=>{
             assert.equal(null, err);
@@ -132,16 +132,18 @@ app.get("/vr_project", (req, res)=>{
 
 app.get("/contact", (req, res)=>{
     let resultArray = [];
-    mongo.connect(url, (err, db)=>{
+    MongoClient.connect(url, {useNewUrlParser: true},(err, client)=>{
         assert.equal(null, err);
+        let db = client.db('profileappdb');
         let cursor = db.collection('message').find();
 
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
-            doc.createdOn = moment.utc(new Date(doc.createdOn)).local().format('MM/DD/YYYY HH:mm:ss');
+            let stillUtc = moment.utc(doc.createdOn).toDate();
+            doc.createdOn = moment(stillUtc).local().format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
-            db.close();
+            client.close();
             res.render('contact.hbs', {
                 pageTitle:'Contact',
                 items:resultArray
