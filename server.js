@@ -46,7 +46,7 @@ app.post('/insert', (req, res, next)=>{
             let cursor = db.collection('message').find();
             cursor.forEach((doc, err)=>{
                 assert.equal(null, err);
-                let stillUtc = moment.utc(doc.createdOn).toDate();
+                let stillUtc = moment.utc(doc.createdOn, 'MM/DD/YYYY HH:mm:ss').toDate();
                 doc.createdOn =  moment(stillUtc).local().format('MM/DD/YYYY HH:mm:ss');
                 resultArray.push(doc);
             }, ()=>{
@@ -139,7 +139,7 @@ app.get("/contact", (req, res)=>{
 
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
-            let stillUtc = moment.utc(doc.createdOn).toDate();
+            let stillUtc = moment.utc(doc.createdOn, 'MM/DD/YYYY HH:mm:ss').toDate();
             doc.createdOn = moment(stillUtc).local().format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
