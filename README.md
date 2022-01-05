@@ -8,4 +8,4 @@ npm start
 Deployed my profile to heroku: https://miaoprofile.herokuapp.com/
 
 ## Database
-Atlas Mongodb: mernprojectdb
+Atlas Mongodb: profileappdb
