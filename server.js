@@ -5,9 +5,10 @@ const objectId = require('mongodb').ObjectID;
 const assert = require('assert');
 const bodyParser = require('body-parser'); //help to get req.body
 const moment = require('moment'); //deal with date format
+const tzmoment = require('moment-timezone');
 const port = process.env.PORT || 3000;
 let url = process.env.MONGODB_URI || 'mongodb+srv://miao:dm123456@webappscluster.feben.mongodb.net/profileappdb?retryWrites=true&w=majority';
-
+const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let app =express();
 
 app.use(bodyParser.urlencoded({
@@ -47,7 +48,7 @@ app.post('/insert', (req, res, next)=>{
             cursor.forEach((doc, err)=>{
                 assert.equal(null, err);
                 let stillUtc = moment.utc(doc.createdOn, 'MM/DD/YYYY HH:mm:ss').toDate();
-                doc.createdOn =  moment.utc(stillUtc).local().format('MM/DD/YYYY HH:mm:ss');
+                doc.createdOn = tzmoment(stillUtc).tz(timezone).format('MM/DD/YYYY HH:mm:ss');
                 resultArray.push(doc);
             }, ()=>{
                 client.close();
@@ -140,7 +141,7 @@ app.get("/contact", (req, res)=>{
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
             let stillUtc = moment.utc(doc.createdOn, 'MM/DD/YYYY HH:mm:ss').toDate();
-            doc.createdOn = moment.utc(stillUtc).local().format('MM/DD/YYYY HH:mm:ss');
+            doc.createdOn = tzmoment(stillUtc).tz(timezone).format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
             client.close();
