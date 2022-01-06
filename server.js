@@ -6,7 +6,7 @@ const assert = require('assert');
 const bodyParser = require('body-parser'); //help to get req.body
 const moment = require('moment'); //deal with date format
 const port = process.env.PORT || 3000;
-let url = process.env.MONGODB_URI || 'mongodb+srv://miao:dm123456@webappscluster.feben.mongodb.net/profileappdb?retryWrites=true&w=majority';
+let url = process.env.MONGODB_URI || 'mongodb://miao:dm123456@webappscluster-shard-00-00.feben.mongodb.net:27017,webappscluster-shard-00-01.feben.mongodb.net:27017,webappscluster-shard-00-02.feben.mongodb.net:27017?ssl=true&replicaSet=atlas-9j7pp1-shard-0&authSource=admin&retryWrites=true&w=majority';
 
 let app =express();
 
