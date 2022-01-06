@@ -9,6 +9,7 @@ const tzmoment = require('moment-timezone');
 const port = process.env.PORT || 3000;
 let url = process.env.MONGODB_URI || 'mongodb+srv://miao:dm123456@webappscluster.feben.mongodb.net/profileappdb?retryWrites=true&w=majority';
 const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 let app =express();
 
 app.use(bodyParser.urlencoded({
@@ -25,6 +26,18 @@ hbs.registerHelper("currentYear", function() {
     return new Date().getFullYear();
 });
 
+hbs.registerHelper("formatDate", function(datetime) {
+        if (moment) {
+            // can use other formats like 'lll' too
+            let stillUtc = moment.utc(datetime, 'MM/DD/YYYY HH:mm:ss').toDate();
+            let localDate = tzmoment(stillUtc).tz(timezone).format('MM/DD/YYYY HH:mm:ss');
+            return localDate
+        }
+        else {
+            return datetime;
+        }
+    });
+
 app.get('/get-data', (req, res, next)=>{
 
 });
@@ -36,7 +49,7 @@ app.post('/insert', (req, res, next)=>{
         author: req.body.author,
         createdOn: moment.utc().format('MM/DD/YYYY HH:mm:ss')
     };
-    console.log(moment(new Date()).utc().format('MM/DD/YYYY HH:mm:ss'));
+
     MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true},(err, client)=>{
         assert.equal(null, err);
         let db = client.db('profileappdb');
@@ -47,8 +60,6 @@ app.post('/insert', (req, res, next)=>{
             let cursor = db.collection('message').find();
             cursor.forEach((doc, err)=>{
                 assert.equal(null, err);
-                let stillUtc = moment.utc(doc.createdOn, 'MM/DD/YYYY HH:mm:ss').toDate();
-                doc.createdOn = tzmoment(stillUtc).tz(timezone).format('MM/DD/YYYY HH:mm:ss');
                 resultArray.push(doc);
             }, ()=>{
                 client.close();
@@ -56,7 +67,9 @@ app.post('/insert', (req, res, next)=>{
                     pageTitle:'Contact',
                     items:resultArray
                 });
-            })
+            });
+
+        }, () => {
             client.close();
         })
     });
@@ -71,12 +84,13 @@ app.post('/update', (req, res, next)=>{
 app.post('/delete', (req, res, next)=>{
     var id = req.body.id;
     console.log('id : ' + id);
-    MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true},(err, db)=>{
+    MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true},(err, client)=>{
         assert.equal(null, err);
+        let db = client.db('profileappdb');
         db.collection('message').deleteOne({"_id": objectId(id)}, (err, result)=>{
             assert.equal(null, err);
             console.log('Item deleted');
-            db.close();
+            client.close();
         })
     })
     res.redirect('/contact');
@@ -140,8 +154,6 @@ app.get("/contact", (req, res)=>{
 
         cursor.forEach((doc, err)=>{
             assert.equal(null, err);
-            let stillUtc = moment.utc(doc.createdOn, 'MM/DD/YYYY HH:mm:ss').toDate();
-            doc.createdOn = tzmoment(stillUtc).tz(timezone).format('MM/DD/YYYY HH:mm:ss');
             resultArray.push(doc);
         }, ()=>{
             client.close();
@@ -149,7 +161,7 @@ app.get("/contact", (req, res)=>{
                 pageTitle:'Contact',
                 items:resultArray
             });
-        })
+        });
     });
 
 });
