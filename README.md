@@ -4,8 +4,12 @@ This is my profile website
 ## Start in local
 npm start
 
+## Database
+Atlas Mongodb: profileappdb
+
 ## Deploy
 Deployed my profile to heroku: https://miaoprofile.herokuapp.com/
 
-## Database
-Atlas Mongodb: profileappdb
+## Fetch heroku logs
+heroku logs -t --app miaoprofile
+
