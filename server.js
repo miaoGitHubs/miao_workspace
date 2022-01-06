@@ -36,7 +36,7 @@ app.post('/insert', (req, res, next)=>{
         createdOn: moment.utc().format('MM/DD/YYYY HH:mm:ss')
     };
     console.log(moment(new Date()).utc().format('MM/DD/YYYY HH:mm:ss'));
-    MongoClient.connect(url, {useNewUrlParser: true},(err, client)=>{
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true},(err, client)=>{
         assert.equal(null, err);
         let db = client.db('profileappdb');
         db.collection('message').insertOne(item, (err, result)=>{
@@ -70,7 +70,7 @@ app.post('/update', (req, res, next)=>{
 app.post('/delete', (req, res, next)=>{
     var id = req.body.id;
     console.log('id : ' + id);
-    MongoClient.connect(url, {useNewUrlParser:true},(err, db)=>{
+    MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true},(err, db)=>{
         assert.equal(null, err);
         db.collection('message').deleteOne({"_id": objectId(id)}, (err, result)=>{
             assert.equal(null, err);
@@ -132,7 +132,7 @@ app.get("/vr_project", (req, res)=>{
 
 app.get("/contact", (req, res)=>{
     let resultArray = [];
-    MongoClient.connect(url, {useNewUrlParser: true},(err, client)=>{
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true},(err, client)=>{
         assert.equal(null, err);
         let db = client.db('profileappdb');
         let cursor = db.collection('message').find();
